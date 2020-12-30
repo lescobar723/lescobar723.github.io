@@ -65,8 +65,8 @@ export default {
     text-align: center;
 }
 #blurb h1{
-  background: #000;
-  color: #bbb;
+  background: #ffa494;
+  color: snow;
   font-weight: 400;
   font-size: 32px;
   line-height: 1;

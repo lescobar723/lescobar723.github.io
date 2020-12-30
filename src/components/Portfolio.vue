@@ -1,6 +1,10 @@
 <template>
     <section class="protfolio">
+        <div class="header">
             <h1>Portfolio</h1>
+            <hr class="start">
+            <b-button variant="dark" size="lg" href="https://drive.google.com/file/d/1j3-xdBtwXnox_wSACiDbUY4uY77lJWYE/view?usp=sharing" target="_blank">Resume</b-button>
+        </div>
             <div class="container" v-for="project in projects" :key="project.term">
                 <div v-for="fall in project.when" :key="fall.course">
                     <b-row>
@@ -32,13 +36,12 @@
             </div>
 
             <b-modal ref="my-modal" id="modal-1" :title="modalTitle" ok-only>
-                <em>{{ modalDate }}</em>
                 <b-embed v-if="modalif"
                     type="iframe"
                     aspect="16by9"
                     :src="modalURL"
                     allowfullscreen
-                    muted
+                    style="padding-bottom: 20px;"
                 ></b-embed>
                 <ul id="bullets">
                     <li v-for="message in modalMessages" :key="message.p">{{message.p}}</li>
@@ -62,7 +65,7 @@ export default {
         modalURL: '',
         projects: [
             { term: 'personal', when: [
-                {course: 'lesleyescobar.com (This Website!)', one:true, text: 'Constructed a personalized website to showcase my skills and experience as a Computer Science major. The website was designed with Vue.js, HTML, CSS, and Bootstrap.' }
+                {course: 'lesleyescobar.com (This Website!)', one:true, text: 'Constructed a personalized website to showcase my skills and experience as a Computer Science major. This website was designed with Vue.js, HTML, CSS, and Bootstrap.' }
             ]},
             { term: 'Fall2020', when: [
                 { course: 'EECS 493: User Interface Development', projs: [ 
@@ -70,27 +73,36 @@ export default {
                         mif: true,
                         message: [
                             {p: '​Collaborated in a team of 4 to design a web application to motivate students to study'},
-                            {p: 'Developed with HTML, CSS (Bootstrap), Vue, and Firebase'}
+                            {p: 'Developed with HTML, CSS (Bootstrap), Vue.js, and Firebase'}
                         ]
                     },
-                    { name: 'Mardi Gras Parade', date: 'October 2020',url: require('../assets/projects/mardi-gras.jpg'), language: 'HTML, CSS, jQuery', url2: require('../assets/modal/mardigrasparade.mp4'), 
+                    { name: 'Mardi Gras Parade', date: 'October 2020',url: require('../assets/projects/mardi-gras.jpg'), language: 'HTML, CSS, JQuery', url2: require('../assets/modal/mardigrasparade.mp4'), 
                         mif: true,
                     }
                 ]},
 
                 { course: 'EECS 485: Web Systems', projs: [
-                    { name: 'Insta485', date: 'September-October 2020', url: require('../assets/projects/screenshot-index-small.png'), language: 'HTML, React.js, Python, Flask, JSON', url2: require('../assets/modal/insta485.mp4'), 
+                    { name: 'Instagram Clone', date: 'September-October 2020', url: require('../assets/projects/screenshot-index-small.png'), language: 'HTML, React.js, Python', url2: require('../assets/modal/insta485.mp4'), 
                         mif: true,
                         message: [
                             {p: 'Constructed an Instagram clone in a team of 3, which included a static site, a server-side dynamic side, and a client-side dynamic side'},
                             {p: 'Accomplished with HTML, CSS, Python (Flask), Jinja2, JavaScript (React), JSON, and SQLite'}
                         ]
                     },
-                    { name: 'MapReduce', date: 'November 2020', url: require('../assets/projects/map-reduce.jpg'), language: 'Python, JSON',
+                    { name: 'MapReduce', date: 'November 2020', url: require('../assets/projects/map-reduce.jpg'), language: 'Python',
                         mif: false,
+                        message: [
+                            {p: 'Implemented a simple Map Reduce Python package in a team of 3 to handle tasks'},
+                            {p: 'Utilized TCP/UDP sockets, Threads, Processes, classes, Python, and JSON'}
+                        ]
                     },
-                    { name: 'Wikipedia Search Engine', date: 'December 2020', url: require('../assets/projects/wiki.png'), language: 'Hadoop, Python, HTML, Flask, JSON', 
+                    { name: 'Wikipedia Search Engine', date: 'December 2020', url: require('../assets/projects/wiki.png'), language: 'Hadoop, Python', 
                         mif: false,
+                        message: [
+                            {p: 'Collaborated in a team of 3 to build a scalable search engine that is similar to a commercial search engine'},
+                            {p: 'Achieved through indexing implemented with MapReduce, information retrieval based on both tf-idf and PageRank scores, and information retrieval based on both tf-idf and PageRank scores'},
+                            {p: 'Developed with Hadoop pipeline script, Python, Flask, JSON, and HTML'}
+                        ]
                     }
                 ]},
             ] },
@@ -99,7 +111,8 @@ export default {
                     { name: 'Puzzle Solver', url: require('../assets/projects/281-1.jpg'), language: 'C++',
                         mif: false,
                         message: [
-                            {p: 'Created a program to solve a maze by either using a stack or queue as determined by the command-line'}
+                            {p: 'Created a program to solve a maze by either using a stack or queue as determined by the command-line'},
+                            {p: 'Uses BFS or DFS algorithm as determined by the command-line'}
                         ]
                     },
                     { name: 'Stock Market Emulation', url: require('../assets/projects/proj-2.jpg'), language: 'C++', 
@@ -202,34 +215,49 @@ export default {
             this.modalTitle = name;
             this.modalDate = date;
             this.modalif = mif;
-            if(this.modalif){
-                this.modalMessages = message;
-            }
-            
-            console.log(this.modalif);
-           
+            this.modalMessages = message;
             this.modalURL = url;
-            this.$refs['my-modal'].show();
-            
+            this.$refs['my-modal'].show(); 
         }
     }
 }
 </script>
 
 <style scoped>
+.header{
+    text-align: center;
+    margin-bottom: 30px;
+}
 .card{
     text-align: center;
 }
+.start{
+    width: 200px;
+    background-color: #f07269;
+    height: 2px;
+}
 h1{
+    font-weight: bold;
     text-align: center;
+    color: #f07269;
+}
+h2{
+    padding-bottom: 10px;
+}
+h3{
+    font-size: 23px;
+    padding-top: 15px;
 }
 .protfolio{
     background-color: #34345238;
-    padding-top: 8%;
-    padding-bottom: 15%;
+    padding-top: 100px;
+    padding-bottom: 7%;
 }
 .img-custome{
     height: 170px;
     margin-top: 15px;
+}
+.card-body{
+    padding-top: 1px;
 }
 </style>

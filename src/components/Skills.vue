@@ -1,6 +1,7 @@
 <template>
-    <div>
+    <div id="start">
         <h1>Skills</h1>
+        <hr>
         <div class="all__skills">
             <section class="skills">
                 <div class="skill" v-for="language in languages" :key="language.language">
@@ -38,10 +39,21 @@ export default {
 </script>
 
 <style scoped>
-h1{
-    text-align: center;
+#start{
+    padding-top: 90px;
+    padding-bottom: 7%;
 }
-
+hr{
+    width: 200px;
+    background-color: #f07269;
+    height: 2px;
+    margin-bottom: 30px;
+}
+h1{
+    font-weight: bold;
+    text-align: center;
+    color: #f07269;
+}
 .all__skills {
     display: flex;
     justify-content: center;

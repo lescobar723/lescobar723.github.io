@@ -28,6 +28,7 @@
     <div id="contact">
       <Contact/>
     </div>
+    <p>Copyright © Lesley Escobar</p>
   </div>
 </template>
 
@@ -68,6 +69,9 @@ export default {
 html{
 	scroll-behavior: smooth;
 }
+#app{
+  font-family: VT323,monospace;
+}
 div{
   display: block;
 }
@@ -91,17 +95,12 @@ div{
 }
 #about{
   display: block;
-  padding-top: 6%;
-  padding-bottom: 7%;
 }
 #skills{
   display: block;
   min-height: 100vh;
-  padding-top: 6%;
-  padding-bottom: 7%;
 }
 #contact{
   display: block;
-  min-height: 100vh;
 }
 </style>
