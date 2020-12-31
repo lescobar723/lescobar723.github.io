@@ -3,13 +3,13 @@
         <h1>Contact Me</h1>
         <hr>
         <b-link href="mailto:lesleyescobar0723@gmail.com">
-            <b-icon icon="envelope-fill" font-scale="5" class="rounded-circle bg-light p-2"></b-icon>
+            <b-icon icon="envelope-fill" font-scale="6" style="color: black;" class="rounded-circle bg-light p-2"></b-icon>
         </b-link>
         <b-link href="https://github.com/lescobar723" target="_blank">
-            <b-icon icon="github" font-scale="5" class="rounded-circle bg-light p-2"></b-icon>
+            <b-icon icon="github" font-scale="6" style="color: black;" class="rounded-circle bg-light p-2"></b-icon>
         </b-link>
         <b-link href="https://www.linkedin.com/in/lesleyescobar/" target="_blank">
-            <b-icon icon="linkedin" font-scale="5" class="rounded-circle bg-light p-2"></b-icon>
+            <b-icon icon="linkedin" font-scale="6" style="color: black;" class="rounded-circle bg-light p-2"></b-icon>
         </b-link>
     </div>
 </template>

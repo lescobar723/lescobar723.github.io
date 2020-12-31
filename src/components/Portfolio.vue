@@ -10,7 +10,14 @@
                     <b-row>
                         <h2>{{fall.course}}</h2>
                     </b-row>
-                    <p v-if="fall.one">{{fall.text}}</p>
+                    <div v-if="fall.one">
+                        <p>{{fall.text}}</p>
+                        <div style="text-align: center;">
+                        <b-link href="https://github.com/lescobar723/website-v2" target="_blank">
+                            <b-icon icon="github" style="color: black;" font-scale="4"></b-icon>
+                        </b-link>
+                        </div>
+                    </div>
                     <b-row>
                         <b-col xs="12" md="6" lg="4" v-for="proj in fall.projs" :key="proj.name">
                             <div class="card">
@@ -20,6 +27,11 @@
                                         :src="proj.url"
                                     >
                                     <h3>{{ proj.name }}</h3>
+                                    <div id="github-1">
+                                    <b-link v-if="proj.name == 'Study Buddy'" href="https://github.com/lescobar723/study-buddy" target="_blank">
+                                        <b-icon icon="github" style="color: black;" font-scale="2"></b-icon>
+                                    </b-link>
+                                    </div>
                                 </div>
                                 <hr>
                                 <div class="card-body">
