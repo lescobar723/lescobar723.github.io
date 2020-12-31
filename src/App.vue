@@ -82,10 +82,8 @@ div{
   background: url(assets/IMG_2868.jpg);
   display: block;
   min-height: 100vh;
-	background-position: center;
-  background-repeat: no-repeat;
+	background-position: center center;
   background-size: cover;
-  background-attachment: fixed;
 }
 #nav {
   position: sticky;
