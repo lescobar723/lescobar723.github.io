@@ -1,17 +1,20 @@
 <template>
 <div>
-    <b-navbar toggleable="md" type="dark" variant="dark">
+    <b-navbar toggleable="lg" type="dark" variant="dark">
         <b-navbar-toggle target="nav-text-collapse"></b-navbar-toggle>
 
-        <b-navbar-brand href="#home">Lesley Escobar</b-navbar-brand>
+        <b-navbar-brand href="#home">
+            <img alt="Lesley Escobar" src="../assets/favicon.png" style="width: 45px;">
+            Lesley Escobar
+        </b-navbar-brand>
 
         <b-collapse id="nav-text-collapse" is-nav>
             <b-navbar-nav>
-                <b-nav-item href='#about'>About</b-nav-item>
-                <b-nav-item href='#portfolio'>Projects</b-nav-item>
-                <b-nav-item href='#skills'>Skills</b-nav-item>
-                <b-nav-item href="https://drive.google.com/file/d/1j3-xdBtwXnox_wSACiDbUY4uY77lJWYE/view?usp=sharing" target="_blank">Resume</b-nav-item>
-                <b-nav-item href='#contact'>Contact Me</b-nav-item>
+                <b-nav-item class="nav-it" href='#about'>About</b-nav-item>
+                <b-nav-item class="nav-it" href='#portfolio'>Portfolio</b-nav-item>
+                <b-nav-item class="nav-it" href='#skills'>Skills</b-nav-item>
+                <b-nav-item class="nav-it" href="https://drive.google.com/file/d/1j3-xdBtwXnox_wSACiDbUY4uY77lJWYE/view?usp=sharing" target="_blank">Resume</b-nav-item>
+                <b-nav-item class="nav-it" href='#contact'>Contact Me</b-nav-item>
             </b-navbar-nav>
         </b-collapse>
   </b-navbar>
@@ -35,6 +38,10 @@ export default {
 </script>
 
 <style scoped>
+.nav-it{
+    padding-right: 30px;
+    padding-left: 30px;
+}
 .navbar.navbar-dark.bg-dark {
     background-color: #ffa494!important;
 }
