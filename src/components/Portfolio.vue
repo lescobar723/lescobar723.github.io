@@ -94,7 +94,7 @@ export default {
                 ]},
 
                 { course: 'EECS 485: Web Systems', projs: [
-                    { name: 'Instagram Clone', date: 'September-October 2020', url: require('../assets/projects/screenshot-index-small.png'), language: 'HTML, React.js, Python', url2: require('../assets/modal/insta485.mp4'), 
+                    { name: 'Instagram Clone', date: 'September-October 2020', url: require('../assets/projects/screenshot-index-small.png'), language: 'React.js, Python, SQLite', url2: require('../assets/modal/insta485.mp4'), 
                         mif: true,
                         message: [
                             {p: 'Constructed an Instagram clone in a team of 3, which included a static site, a server-side dynamic side, and a client-side dynamic side'},

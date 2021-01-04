@@ -24,13 +24,15 @@ export default {
   data() {
       return {
           languages:[
-              { language: 'C++', percentage: '80' },
+              { language: 'C/C++', percentage: '80' },
               { language: 'Python', percentage: '60' },
               { language: 'HTML & CSS', percentage: '80' },
               { language: 'JavaScript', percentage: '65' },
               { language: 'Vue.js', percentage: '70' },
               { language: 'React.js', percentage: '55' },
+              { language: 'jQuery', percentage: '40' },
               { language: 'Git', percentage: '30' },
+              { language: 'SQLite', percentage: '30' },
               { language: 'Arduino', percentage: '10' },
           ]
       }
